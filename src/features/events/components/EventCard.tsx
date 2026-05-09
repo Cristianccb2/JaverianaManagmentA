@@ -15,26 +15,50 @@ export default function EventCard({ event }: Props) {
 
   return (
     <>
-      <article className="rounded-2xl bg-white p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl">
-        <span className="inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
-          {event.category}
-        </span>
+      <article className="overflow-hidden rounded-2xl bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+  <img
+    src={event.image}
+    alt={event.title}
+    className="h-52 w-full object-cover"
+  />
 
-        <h2 className="mt-4 text-xl font-semibold text-gray-800">
-          {event.title}
-        </h2>
+  <div className="p-6">
+    <div className="flex items-center justify-between">
+      <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
+        {event.category}
+      </span>
 
-        <p className="mt-3 text-gray-600">
-          {event.body}
-        </p>
+      <span className="text-sm text-gray-500">
+        {event.modality}
+      </span>
+    </div>
 
-        <button
-          onClick={() => setOpen(true)}
-          className="mt-6 rounded-lg bg-blue-600 px-4 py-2 font-medium text-white transition hover:bg-blue-700"
-        >
-          Inscribirse
-        </button>
-      </article>
+    <h2 className="mt-4 text-xl font-semibold text-gray-800">
+      {event.title}
+    </h2>
+
+    <p className="mt-3 text-gray-600">
+      {event.description}
+    </p>
+
+    <div className="mt-4 space-y-1 text-sm text-gray-500">
+      <p>
+        <strong>Duración:</strong> {event.duration}
+      </p>
+
+      <p>
+        <strong>Facultad:</strong> {event.faculty}
+      </p>
+    </div>
+
+    <button
+      onClick={() => setOpen(true)}
+      className="mt-6 w-full rounded-lg bg-blue-600 px-4 py-3 font-medium text-white transition hover:bg-blue-700"
+    >
+      Inscribirse
+    </button>
+  </div>
+</article>
 
       <Modal
         isOpen={open}
