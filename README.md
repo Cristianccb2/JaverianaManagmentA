@@ -98,14 +98,6 @@ Permite escalabilidad y control predecible del estado.
 
 ---
 
-## Async Thunks
-
-Se implementó `createAsyncThunk` para simular:
-
-- llamadas asíncronas
-- loading states
-- manejo de errores
-
 
 ## Formularios modernos
 
@@ -126,25 +118,26 @@ Se utiliza JSONPlaceholder como simulación de backend, pero los datos que fuero
 
 ## 1. Clonar repositorio
 
-```bash
+```
+https://github.com/Cristianccb2/JaverianaManagmentA.git
 
 ```
 
 ## 2. Entrar al proyecto
 
-```bash
+```
 cd javeriana-leads-manager
 ```
 
 ## 3. Instalar dependencias
 
-```bash
+```
 npm install
 ```
 
 ## 4. Ejecutar en desarrollo
 
-```bash
+```
 npm run dev
 ```
 
@@ -154,6 +147,6 @@ La pagina web cuenta con modo oscuro que se adapta dependiendo las configuracion
 
 ---
 
-# 👨‍💻 Autor
+# Autor
 
 Cristian Camilo Cabrera Barreto
