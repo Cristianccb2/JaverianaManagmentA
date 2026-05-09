@@ -1,15 +1,9 @@
 import { z } from 'zod'
-
 import { useForm } from 'react-hook-form'
-
 import { zodResolver } from '@hookform/resolvers/zod'
-
 import { v4 as uuid } from 'uuid'
-
 import { useAppDispatch } from '../../../hooks/redux'
-
 import { addLead } from '../leadsSlice'
-
 import { normalizeText } from '../../../utils/normalize'
 
 const schema = z.object({
@@ -22,7 +16,7 @@ const schema = z.object({
     .email('Correo inválido')
     .refine(
       email => email.endsWith('@javeriana.edu.co'),
-      'Debe usar dominio @javeriana.edu.co',
+      'Recuerde usar el dominio @javeriana.edu.co',
     ),
 })
 
@@ -51,13 +45,9 @@ export default function LeadForm({
     dispatch(
       addLead({
         id: uuid(),
-
         fullName: normalizeText(data.fullName),
-
         email: data.email.trim().toLowerCase(),
-
         program,
-
         createdAt: new Date().toISOString(),
       }),
     )

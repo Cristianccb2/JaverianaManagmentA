@@ -1,5 +1,4 @@
 import { api } from '../../services/axios'
-
 import type { EventItem } from './types'
 
 const programs: Omit<EventItem, 'id'>[] = [

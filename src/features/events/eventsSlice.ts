@@ -11,6 +11,8 @@ interface EventsState {
   loading: boolean
   search: string
   category: string
+  modality: string
+  faculty: string
 }
 
 const initialState: EventsState = {
@@ -18,6 +20,8 @@ const initialState: EventsState = {
   loading: false,
   search: '',
   category: 'Todos',
+  modality: 'Todas',
+  faculty: 'Todas',
 }
 
 export const fetchEvents = createAsyncThunk(
@@ -38,6 +42,14 @@ const eventsSlice = createSlice({
     setCategory(state, action: PayloadAction<string>) {
       state.category = action.payload
     },
+
+    setModality(state, action: PayloadAction<string>) {
+  state.modality = action.payload
+    },
+
+    setFaculty(state, action: PayloadAction<string>) {
+    state.faculty = action.payload
+    },
   },
 
   extraReducers: builder => {
@@ -57,6 +69,11 @@ const eventsSlice = createSlice({
   },
 })
 
-export const { setSearch, setCategory } = eventsSlice.actions
+export const {
+  setSearch,
+  setCategory,
+  setModality,
+  setFaculty,
+} = eventsSlice.actions
 
 export default eventsSlice.reducer

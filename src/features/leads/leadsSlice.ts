@@ -1,12 +1,7 @@
 import { createSlice} from '@reduxjs/toolkit'
 import type {PayloadAction } from '@reduxjs/toolkit'
-
 import type { Lead } from './types'
-
-import {
-  getLeadsFromStorage,
-  saveLeadsToStorage,
-} from '../../utils/localstorage'
+import {getLeadsFromStorage,saveLeadsToStorage} from '../../utils/localstorage'
 
 interface LeadsState {
   leads: Lead[]

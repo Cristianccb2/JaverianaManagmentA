@@ -21,15 +21,15 @@ export default function Dashboard() {
   }, [dispatch])
 
   return (
-    <main className="min-h-screen bg-gray-100">
+    <main className="min-h-screen">
       <section className="mx-auto max-w-7xl px-4 py-10">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-800">
-            Javeriana Lead & Events Manager
+          <h1 className="text-4xl font-bold text-blue-950 dark:text-gray-400 flex justify-center mb-6">
+            GESTOR DE EVENTOS Y LEADS
           </h1>
 
-          <p className="mt-2 text-gray-600">
-            Gestión de programas y prospectos académicos
+          <p className="mt-2 text-gray-600 flex justify-center dark:text-gray-400">
+            Eventos y prospectos academicos a un solo click
           </p>
         </header>
 
