@@ -61,6 +61,7 @@ Los leads se almacenan en:
 ```
 localStorage
 ```
+(para practicidad de la evaluación los leds almacenados en el localeStorage se veran al final del dachboard)
 
 Esto permite mantener información incluso después de recargar la aplicación.
 
@@ -140,6 +141,9 @@ npm install
 ```
 npm run dev
 ```
+
+# Modo de uso
+El operario tiene acceso a todos los eventos recuperados por la "API" junto con sus respecctivos filtros, una vez hay un interesado el operario puede insicribirlo al avento, donde se abrira un boton con la información de contacto, de ser finalizado el proceso de forma exitosa el interesado "lead" quedara almacenado
 
 
 # Funcionalidades adicionales
