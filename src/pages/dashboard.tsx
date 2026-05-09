@@ -6,7 +6,7 @@ import { fetchEvents } from '../features/events/eventsSlice'
 
 import { selectFilteredEvents } from '../features/events/eventsSelector'
 import EventsFilters from '../features/events/components/EventsFilters'
-import EventsGrid from '../features/events/components/eventsGrid'
+import EventsGrid from '../features/events/components/EventsGrid'
 import EventsLoader from '../features/events/components/EventsLoader'
 
 export default function Dashboard() {
