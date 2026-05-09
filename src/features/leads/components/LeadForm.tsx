@@ -71,7 +71,7 @@ export default function LeadForm({
           type="text"
           placeholder="Nombre completo"
           {...register('fullName')}
-          className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500 dark:text-taupe-900"
         />
 
         {errors.fullName && (
@@ -86,7 +86,8 @@ export default function LeadForm({
           type="email"
           placeholder="Correo institucional"
           {...register('email')}
-          className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-blue-500 dark:text-taupe-900
+          "
         />
 
         {errors.email && (
@@ -98,7 +99,7 @@ export default function LeadForm({
 
       <button
         type="submit"
-        className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-700"
+        className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-950"
       >
         Registrarme
       </button>
