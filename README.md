@@ -1,75 +1,152 @@
-# React + TypeScript + Vite
+# Javeriana Gestor de eventos y leads
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SPA desarrollada como prueba técnica para la gestión de programas académicos y registro de leads.  
+La aplicación está construida con React, Redux Toolkit y TypeScript, implementando arquitectura escalable tipo feature-based.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# En el siguiente link se encuentra la aplicación funcionando
 
-## React Compiler
+> https://javeriana-managment-a-bic7.vercel.app/
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+#  Tecnologías utilizadas
 
-Note: This will impact Vite dev & build performances.
+- React + Vite
+- TypeScript
+- Redux Toolkit
+- React Redux
+- Axios
+- React Hook Form
+- Zod
+- Reselect
+- TailwindCSS
+- localStorage API
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Características principales
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+##  Gestión de programas académicos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Datos simulados con estructura tipo backend
+- Transformación de información desde API mock
+- Renderizado dinámico de cards
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+##  Filtros avanzados
+
+La aplicación permite filtrar programas por:
+
+- Búsqueda por texto
+- Categoría (Pregrado, Posgrado, Educación Continua)
+- Modalidad (Presencial, Virtual, Híbrido)
+- Facultad dinámica
+
+Los filtros funcionan en tiempo real sin recarga de página.
+
+---
+
+## Registro de Leads
+
+- Formulario con React Hook Form
+- Validación con Zod
+- Restricción de dominio institucional (`@javeriana.edu.co`)
+- Normalización de datos
+- Persistencia en Redux + localStorage
+
+---
+
+##  Persistencia de datos
+
+Los leads se almacenan en:
+
+```
+localStorage
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Esto permite mantener información incluso después de recargar la aplicación.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+#  Arquitectura del proyecto
+
 ```
+src/
+--- app/              # Store de Redux
+--- components/       # Componentes reutilizables
+--- features/
+─ events/       # Lógica de eventos/programas
+─ leads/        # Gestión de leads
+---hooks/            # Hooks de redux
+--- pages/            # Vistas principales
+--- services/         # instancia de axios
+--- utils/            # manejo del local storage y estandarización de textos
+--- main.tsx
+```
+
+---
+
+# Decisiones técnicas
+
+## Redux Toolkit
+
+Se utilizó para centralizar el estado global:
+
+- Eventos
+- Filtros
+- Leads
+
+Permite escalabilidad y control predecible del estado.
+
+---
+
+
+## Formularios modernos
+
+Se integró:
+
+- React Hook Form (manejo eficiente de inputs)
+- Zod (validación tipada)
+
+---
+
+## Simulación de API
+
+Se utiliza JSONPlaceholder como simulación de backend, pero los datos que fueron modificados para mejora de la experiencia 
+
+---
+
+# Instalación y ejecución
+
+## 1. Clonar repositorio
+
+```
+https://github.com/Cristianccb2/JaverianaManagmentA.git
+
+```
+
+## 2. Entrar al proyecto
+
+```
+cd javeriana-leads-manager
+```
+
+## 3. Instalar dependencias
+
+```
+npm install
+```
+
+## 4. Ejecutar en desarrollo
+
+```
+npm run dev
+```
+
+
+# Funcionalidades adicionales
+La pagina web cuenta con modo oscuro que se adapta dependiendo las configuraciones del navegador
+
+---
+
+# Autor
+
+Cristian Camilo Cabrera Barreto
