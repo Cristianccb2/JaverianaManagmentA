@@ -1,4 +1,4 @@
-# Javeriana Gestor de eventos y leads
+# Gestor de eventos y leads
 
 SPA desarrollada como prueba técnica para la gestión de programas académicos y registro de leads.  
 La aplicación está construida con React, Redux Toolkit y TypeScript, implementando arquitectura escalable tipo feature-based.
